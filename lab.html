@@ -3,8 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Lab | Paradox Playground</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Primary Meta Tags -->
+    <title>The Paradox Laboratory | Experiments in Chaos</title>
+    <meta name="title" content="The Paradox Laboratory | Experiments in Chaos">
+    <meta name="description" content="Step into The Paradox Laboratory. Calculate the impossible with our Cosmic Birth Analysis and Friday Compatibility Paradox.">
+    <meta name="keywords" content="absurd calculators, relationship paradox, cosmic birth analysis, funny science, prank lab">
+    <meta name="author" content="Kafi Abdullah">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://paradox-playground.com/lab.html">
+    <meta property="og:title" content="The Paradox Laboratory | Experiments in Chaos">
+    <meta property="og:description" content="Step into The Paradox Laboratory. Calculate the impossible with our Cosmic Birth Analysis and Friday Compatibility Paradox.">
+    <meta property="og:image" content="https://paradox-playground.com/og-lab.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://paradox-playground.com/lab.html">
+    <meta property="twitter:title" content="The Paradox Laboratory | Experiments in Chaos">
+    <meta property="twitter:description" content="Step into The Paradox Laboratory. Calculate the impossible with our Cosmic Birth Analysis and Friday Compatibility Paradox.">
+    <meta property="twitter:image" content="https://paradox-playground.com/og-lab.jpg">
+
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body id="lab-body">
@@ -35,41 +56,82 @@
         </ul>
     </div>
 
+    <header class="hero" style="min-height: 30vh; background: radial-gradient(circle, #1a3300 0%, #0a0a0a 100%);">
+        <h1 class="glitch">THE PARADOX LABORATORY</h1>
+        <p>Where science meets absurdity and logic takes a vacation.</p>
+    </header>
+
     <section class="section">
-        <h2 class="title">The Paradox Lab</h2>
-        <p style="text-align: center; margin-bottom: 3rem; color: var(--text-gray);">Experiment with your destiny and relationships.</p>
+        <div class="lab-container" style="margin-bottom: 4rem; border-color: var(--neon-yellow);">
+            <h2 style="color: var(--neon-yellow); margin-bottom: 1.5rem;">🧪 Forbidden Lab Guide</h2>
+            <div style="text-align: left; color: var(--text-gray); line-height: 1.6;">
+                <p>Welcome, Researcher. You have entered the most unstable sector of the Paradox Playground. Within these walls, we apply <strong>Zero-Logic Physics</strong> to solve problems that don't exist.</p>
+                <br>
+                <p><strong>Lab Safety Rules:</strong></p>
+                <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                    <li>Do not question the results; the results question you.</li>
+                    <li>If you see a floating toaster, ignore it. It's just a glitch in the space-time continuum.</li>
+                    <li>All calculations are 100% accurate in a parallel universe.</li>
+                </ul>
+            </div>
+        </div>
 
         <div class="grid">
             <!-- BIRTH DATE CALCULATOR -->
             <div class="lab-container">
-                <h3>🎂 Cosmic Birth Analysis</h3>
-                <p style="margin-bottom: 1rem; color: var(--text-gray);">Enter your birthday to see your true form.</p>
+                <div style="font-size: 3rem; color: var(--neon-pink); margin-bottom: 1rem;">🎂</div>
+                <h3>Cosmic Birth Analysis</h3>
+                <p style="margin-bottom: 1.5rem; color: var(--text-gray);">Our quantum sensors will scan your birth date to determine your true interdimensional identity.</p>
                 <div class="lab-form">
                     <input type="date" id="birth-date" class="lab-input">
-                    <button class="btn-calc" id="calc-birth">Analyze Destiny</button>
+                    <button class="btn-calc" id="calc-birth">Initialize Scan</button>
                 </div>
                 <div id="birth-result" class="result-box"></div>
             </div>
 
             <!-- RELATIONSHIP TEST -->
             <div class="lab-container">
-                <h3>❤️ Compatibility Paradox</h3>
-                <p style="margin-bottom: 1rem; color: var(--text-gray);">Test your "Friday" compatibility.</p>
+                <div style="font-size: 3rem; color: var(--neon-blue); margin-bottom: 1rem;">❤️</div>
+                <h3>The Friday Compatibility Paradox</h3>
+                <p style="margin-bottom: 1.5rem; color: var(--text-gray);">Calculate the stability of a relationship when "Friday" is missing from the equation. Truly chaotic science.</p>
                 <div class="lab-form">
                     <select id="rel-type" class="lab-input">
                         <option value="husband">Husband without Friday</option>
                         <option value="wife">Wife without Friday</option>
                     </select>
-                    <input type="text" id="partner-name" class="lab-input" placeholder="Partner's Name">
-                    <button class="btn-calc" id="calc-rel">Calculate Paradox</button>
+                    <input type="text" id="partner-name" class="lab-input" placeholder="Enter Partner's Name">
+                    <button class="btn-calc" id="calc-rel" style="background: var(--neon-pink); color: white;">Execute Paradox</button>
                 </div>
                 <div id="rel-result" class="result-box"></div>
             </div>
         </div>
+
+        <!-- NEW SECTION: THE ABSURDITY INDEX -->
+        <section style="margin-top: 5rem;">
+            <h2 class="title">The Absurdity Index</h2>
+            <div class="grid">
+                <div class="card">
+                    <i class="fas fa-flask"></i>
+                    <h3>Liquid Gravity</h3>
+                    <p>A theory that gravity behaves like water on Tuesdays, causing everything to drift slowly to the left.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-atom"></i>
+                    <h3>The Ego Atom</h3>
+                    <p>The discovery of an atom that refuses to bond with others because it thinks it's too good for them.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-infinity"></i>
+                    <h3>The Loophole</h3>
+                    <p>A mathematical proof that if you walk in a circle long enough, you eventually arrive at yesterday.</p>
+                </div>
+            </div>
+        </section>
     </section>
 
     <footer style="text-align: center; padding: 2rem; color: var(--text-gray);">
-        <p>&copy; 2026 The Paradox Playground. Stay Curious!</p>
+        <p>Designed & Developed by <a href="https://facebook.com/kafiabdullah.me" target="_blank" style="color: var(--neon-blue); text-decoration: none; font-weight: bold;">Kafi Abdullah</a></p>
+        <p style="font-size: 0.8rem; margin-top: 0.5rem;">&copy; 2026 The Paradox Playground. Stay Curious!</p>
     </footer>
 
     <script src="assets/js/main.js"></script>
