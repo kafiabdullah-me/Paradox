@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Perceptions | Paradox Playground</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body id="perceptions-body">
+
+    <nav class="nav">
+        <a href="index.html" class="logo">PARADOX</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="games.html">Brainstorm Games</a></li>
+            <li><a href="perceptions.html">The Perceptions</a></li>
+            <li><a href="lab.html">The Lab</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+        <div class="menu-btn" id="menu-toggle"><i class="fas fa-bars"></i></div>
+    </nav>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2 class="glitch" style="font-size: 2rem;">PARADOX</h2>
+        </div>
+        <ul class="sidebar-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="games.html">Brainstorm Games</a></li>
+            <li><a href="perceptions.html">The Perceptions</a></li>
+            <li><a href="lab.html">The Lab</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+    </div>
+
+    <header class="hero" style="min-height: 40vh; background: radial-gradient(circle, #1a0033 0%, #0a0a0a 100%);">
+        <h1 class="glitch">THE PERCEPTION PARADOX</h1>
+        <p>Your eyes are lying to you. Can you spot the truth?</p>
+    </header>
+
+    <section class="section">
+        <h2 class="title">The Gallery of Deception</h2>
+
+        <div class="illusion-grid">
+            <!-- Illusion 1 -->
+            <div class="illusion-card">
+                <div class="illusion-img-container">
+                    <img src="https://picsum.photos/seed/illusion1/400/300" alt="The Ames Room" class="illusion-img">
+                </div>
+                <div class="illusion-info">
+                    <h3 class="illusion-title">The Ames Room</h3>
+                    <p class="illusion-desc">People appear to grow and shrink as they move across the room.</p>
+                    <button class="reveal-btn" onclick="revealExplanation(this)">Reveal the Trick</button>
+                    <div class="explanation">
+                        The room is actually trapezoidal, not rectangular. The ceiling and floor are slanted, but from one specific viewpoint, it looks like a normal box.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Illusion 2 -->
+            <div class="illusion-card">
+                <div class="illusion-img-container">
+                    <img src="https://picsum.photos/seed/illusion2/400/300" alt="Müller-Lyer Illusion" class="illusion-img">
+                </div>
+                <div class="illusion-info">
+                    <h3 class="illusion-title">Müller-Lyer Lines</h3>
+                    <p class="illusion-desc">Which line is longer? They look different, but the truth is surprising.</p>
+                    <button class="reveal-btn" onclick="revealExplanation(this)">Reveal the Trick</button>
+                    <div class="explanation">
+                        Both lines are exactly the same length! Your brain interprets the arrows as depth cues (corners of a building), making one seem farther away and thus longer.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Illusion 3 -->
+            <div class="illusion-card">
+                <div class="illusion-img-container">
+                    <img src="https://picsum.photos/seed/illusion3/400/300" alt="Penrose Triangle" class="illusion-img">
+                </div>
+                <div class="illusion-info">
+                    <h3 class="illusion-title">The Impossible Triangle</h3>
+                    <p class="illusion-desc">A shape that can be drawn, but cannot exist in 3D space.</p>
+                    <button class="reveal-btn" onclick="revealExplanation(this)">Reveal the Trick</button>
+                    <div class="explanation">
+                        This is an "impossible object." The lines are disconnected in reality, but the 2D drawing tricks your brain into connecting them into a continuous loop.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Illusion 4 -->
+            <div class="illusion-card">
+                <div class="illusion-img-container">
+                    <img src="https://picsum.photos/seed/illusion4/400/300" alt="Rubin's Vase" class="illusion-img">
+                </div>
+                <div class="illusion-info">
+                    <h3 class="illusion-title">The Dual Perspective</h3>
+                    <p class="illusion-desc">Do you see a vase, or two faces looking at each other?</p>
+                    <button class="reveal-btn" onclick="revealExplanation(this)">Reveal the Trick</button>
+                    <div class="explanation">
+                        This is a figure-ground illusion. Your brain cannot focus on both the vase and the faces simultaneously; it must flip between them.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Illusion 5 -->
+            <div class="illusion-card">
+                <div class="illusion-img-container">
+                    <img src="https://picsum.photos/seed/illusion5/400/300" alt="Hermann Grid" class="illusion-img">
+                </div>
+                <div class="illusion-info">
+                    <h3 class="illusion-title">The Ghost Spots</h3>
+                    <p class="illusion-desc">Stare at the intersections. Do you see gray dots appearing and disappearing?</p>
+                    <button class="reveal-btn" onclick="revealExplanation(this)">Reveal the Trick</button>
+                    <div class="explanation">
+                        This is caused by "lateral inhibition" in your retina. The cells in your eye compete for signals, creating ghost images where the white lines intersect.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Illusion 6 -->
+            <div class="illusion-card">
+                <div class="illusion-img-container">
+                    <img src="https://picsum.photos/seed/illusion6/400/300" alt="Troxler's Fading" class="illusion-img">
+                </div>
+                <div class="illusion-info">
+                    <h3 class="illusion-title">The Fading Void</h3>
+                    <p class="illusion-desc">Stare at the center for 30 seconds. The colors will start to vanish.</p>
+                    <button class="reveal-btn" onclick="revealExplanation(this)">Reveal the Trick</button>
+                    <div class="explanation">
+                        Troxler's Effect happens when neurons stop responding to unchanging stimuli. Your brain simply "deletes" the stable parts of the image.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Illusion 7 -->
+            <div class="illusion-card">
+                <div class="illusion-img-container">
+                    <img src="https://picsum.photos/seed/illusion7/400/300" alt="Akiyoshi Illusion" class="illusion-img">
+                </div>
+                <div class="illusion-info">
+                    <h3 class="illusion-title">The Static Motion</h3>
+                    <p class="illusion-desc">Is the image moving? Blink your eyes and check again.</p>
+                    <button class="reveal-btn" onclick="revealExplanation(this)">Reveal the Trick</button>
+                    <div class="explanation">
+                        High-contrast patterns and specific angles trick the brain's motion detectors, making a completely still image feel like it's vibrating or shifting.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Illusion 8 -->
+            <div class="illusion-card">
+                <div class="illusion-img-container">
+                    <img src="https://picsum.photos/seed/illusion8/400/300" alt="Checker shadow" class="illusion-img">
+                </div>
+                <div class="illusion-info">
+                    <h3 class="illusion-title">The Shadow Lie</h3>
+                    <p class="illusion-desc">Are square A and B different colors? Look closer.</p>
+                    <button class="reveal-btn" onclick="revealExplanation(this)">Reveal the Trick</button>
+                    <div class="explanation">
+                        They are exactly the same shade of gray. Your brain "corrects" the color based on the perceived shadow, making the darker area seem lighter.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 2rem; color: var(--text-gray);">
+        <p>Designed & Developed by <a href="https://facebook.com/kafiabdullah.me" target="_blank" style="color: var(--neon-blue); text-decoration: none; font-weight: bold;">Kafi Abdullah</a></p>
+        <p style="font-size: 0.8rem; margin-top: 0.5rem;">&copy; 2026 The Paradox Playground. Stay Curious!</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/perceptions.js"></script>
+</body>
+</html>

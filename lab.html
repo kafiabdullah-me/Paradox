@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Lab | Paradox Playground</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body id="lab-body">
+
+    <nav class="nav">
+        <a href="index.html" class="logo">PARADOX</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="games.html">Brainstorm Games</a></li>
+            <li><a href="perceptions.html">The Perceptions</a></li>
+            <li><a href="lab.html">The Lab</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+        <div class="menu-btn" id="menu-toggle"><i class="fas fa-bars"></i></div>
+    </nav>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2 class="glitch" style="font-size: 2rem;">PARADOX</h2>
+        </div>
+        <ul class="sidebar-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="games.html">Brainstorm Games</a></li>
+            <li><a href="perceptions.html">The Perceptions</a></li>
+            <li><a href="lab.html">The Lab</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+    </div>
+
+    <section class="section">
+        <h2 class="title">The Paradox Lab</h2>
+        <p style="text-align: center; margin-bottom: 3rem; color: var(--text-gray);">Experiment with your destiny and relationships.</p>
+
+        <div class="grid">
+            <!-- BIRTH DATE CALCULATOR -->
+            <div class="lab-container">
+                <h3>🎂 Cosmic Birth Analysis</h3>
+                <p style="margin-bottom: 1rem; color: var(--text-gray);">Enter your birthday to see your true form.</p>
+                <div class="lab-form">
+                    <input type="date" id="birth-date" class="lab-input">
+                    <button class="btn-calc" id="calc-birth">Analyze Destiny</button>
+                </div>
+                <div id="birth-result" class="result-box"></div>
+            </div>
+
+            <!-- RELATIONSHIP TEST -->
+            <div class="lab-container">
+                <h3>❤️ Compatibility Paradox</h3>
+                <p style="margin-bottom: 1rem; color: var(--text-gray);">Test your "Friday" compatibility.</p>
+                <div class="lab-form">
+                    <select id="rel-type" class="lab-input">
+                        <option value="husband">Husband without Friday</option>
+                        <option value="wife">Wife without Friday</option>
+                    </select>
+                    <input type="text" id="partner-name" class="lab-input" placeholder="Partner's Name">
+                    <button class="btn-calc" id="calc-rel">Calculate Paradox</button>
+                </div>
+                <div id="rel-result" class="result-box"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 2rem; color: var(--text-gray);">
+        <p>&copy; 2026 The Paradox Playground. Stay Curious!</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/lab.js"></script>
+</body>
+</html>

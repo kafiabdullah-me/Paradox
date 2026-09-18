@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brainstorm Games | Paradox Playground</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .game-container {
+            background: #111;
+            border: 3px solid var(--neon-blue);
+            border-radius: 20px;
+            padding: 2rem;
+            max-width: 800px;
+            margin: 2rem auto;
+            text-align: center;
+            box-shadow: 0 0 30px rgba(0, 242, 255, 0.2);
+        }
+        .score-board {
+            font-size: 1.5rem;
+            color: var(--neon-yellow);
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+        }
+        .game-content {
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .option-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .game-btn {
+            padding: 1rem;
+            font-size: 1.2rem;
+            background: var(--card-bg);
+            color: white;
+            border: 2px solid #444;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .game-btn:hover {
+            border-color: var(--neon-pink);
+            background: #222;
+        }
+        #memory-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 80px);
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .mem-box {
+            width: 80px;
+            height: 80px;
+            background: #333;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .mem-box.active { background: var(--neon-blue) !important; box-shadow: 0 0 15px var(--neon-blue); }
+        .mem-box.wrong { background: #ff0000 !important; }
+    </style>
+</head>
+<body id="game-body">
+
+    <nav class="nav">
+        <a href="index.html" class="logo">PARADOX</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="games.html">Brainstorm Games</a></li>
+            <li><a href="perceptions.html">The Perceptions</a></li>
+            <li><a href="lab.html">The Lab</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+        <div class="menu-btn" id="menu-toggle"><i class="fas fa-bars"></i></div>
+    </nav>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2 class="glitch" style="font-size: 2rem;">PARADOX</h2>
+        </div>
+        <ul class="sidebar-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="games.html">Brainstorm Games</a></li>
+            <li><a href="perceptions.html">The Perceptions</a></li>
+            <li><a href="lab.html">The Lab</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+    </div>
+
+    <section class="section">
+        <h2 class="title">The Brainstorming Hub</h2>
+
+        <div id="quest-panel" style="background: #222; padding: 1.5rem; border-radius: 15px; border: 2px solid var(--neon-yellow); margin-bottom: 3rem; text-align: center;">
+            <h3 style="color: var(--neon-yellow); margin-bottom: 1rem;">🏆 Paradox Master Quest</h3>
+            <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; font-size: 0.9rem;">
+                <div id="task-stroop">❌ Stroop: 5 Points</div>
+                <div id="task-riddles">❌ Riddles: 3 Solved</div>
+                <div id="task-memory">❌ Memory: Lvl 5</div>
+                <div id="task-math">❌ Math: 10 Correct</div>
+            </div>
+            <button id="claim-reward" style="display:none; margin-top: 1rem; padding: 0.5rem 1rem; background: gold; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">CLAIM CERTIFICATE</button>
+        </div>
+
+        <div class="grid" id="game-selection">
+            <div class="card" onclick="initGame('stroop')">
+                <i class="fas fa-palette"></i>
+                <h3>Stroop Clash</h3>
+                <p>Ignore the word, name the color!</p>
+            </div>
+            <div class="card" onclick="initGame('riddles')">
+                <i class="fas fa-question"></i>
+                <h3>Paradox Riddles</h3>
+                <p>Solve the impossible.</p>
+            </div>
+            <div class="card" onclick="initGame('memory')">
+                <i class="fas fa-brain"></i>
+                <h3>Memory Maze</h3>
+                <p>Recall the glowing sequence.</p>
+            </div>
+            <div class="card" onclick="initGame('math')">
+                <i class="fas fa-calculator"></i>
+                <h3>Panic Math</h3>
+                <p>Solve while the numbers shake!</p>
+            </div>
+            <div class="card" onclick="initGame('clicker')">
+                <i class="fas fa-mouse"></i>
+                <h3>The Impossible Click</h3>
+                <p>Try to click the button. I bet you can't!</p>
+            </div>
+            <div class="card" onclick="initGame('reverse')">
+                <i class="fas fa-redo"></i>
+                <h3>Reverse Logic</h3>
+                <p>Answer "No" when it's "Yes". Don't fail!</p>
+            </div>
+        </div>
+
+
+        <div id="game-wrapper" style="display:none;">
+            <div class="game-container">
+                <div class="score-board">
+                    <span>Score: <span id="score">0</span></span>
+                    <span id="timer">Time: 30s</span>
+                    <button onclick="exitGame()" style="background:none; border:none; color:white; cursor:pointer; font-size: 1.2rem;">&times; Exit</button>
+                </div>
+                <div id="game-screen" class="game-content"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/games.js"></script>
+</body>
+</html>
